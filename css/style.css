@@ -183,7 +183,6 @@ header a {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 20px #a7a7a7;
   position: relative;
-  z-index: 1;
 }
 .Explore .btn:hover::after {
   opacity: 1;
@@ -199,10 +198,10 @@ header a {
   background: linear-gradient(#fface8, #ae80e5);
   box-shadow: 5px 5px 15px rgb(128, 128, 128);
   opacity: 0;
-  transition: opacity 500ms;
+  transition: 400ms;
 }
 .Explore .btn p {
-  z-index: 2;
+  z-index: 1;
   color: white;
   font-size: 18px;
 }
@@ -229,11 +228,6 @@ header a {
   box-shadow: 2px 2px 15px #c0c0c0;
   position: relative;
 }
-@media screen and (min-width: 992px) {
-  .fonctionnement .box {
-    width: 30%;
-  }
-}
 .fonctionnement .box:nth-child(2) {
   margin: 20px 0 20px 0;
 }
@@ -244,6 +238,11 @@ header a {
   cursor: pointer;
   background: #f2eafb;
   transition: 250ms;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement .box {
+    width: 30%;
+  }
 }
 .fonctionnement span {
   width: 100px;
@@ -398,8 +397,10 @@ footer a {
   padding: 10px 20px 80px 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   top: -50px;
+  margin-bottom: -50px;
 }
 .menu .nom-du-menu {
   display: flex;
@@ -412,9 +413,11 @@ footer a {
 }
 .menu .services {
   position: relative;
+  margin-top: 20px;
 }
 .menu .services h2 {
   font-size: 20px;
+  margin-bottom: 30px;
 }
 .menu .services h2::after {
   content: "";
@@ -435,8 +438,8 @@ footer a {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 5px 20px #a7a7a7;
   position: relative;
-  z-index: 1;
   margin: auto;
+  margin-top: 30px;
 }
 .menu .btn:hover::after {
   opacity: 1;
@@ -452,10 +455,10 @@ footer a {
   background: linear-gradient(#fface8, #ae80e5);
   box-shadow: 5px 5px 15px rgb(128, 128, 128);
   opacity: 0;
-  transition: opacity 500ms;
+  transition: 400ms;
 }
 .menu .btn p {
-  z-index: 2;
+  z-index: 1;
   color: white;
   font-size: 18px;
 }
@@ -485,13 +488,9 @@ footer a {
   align-items: flex-end;
   justify-content: space-between;
   padding: 15px;
+  margin-bottom: 20px;
 }
-@media screen and (min-width: 992px) {
-  .menu-cards {
-    width: 30%;
-  }
-}
-.menu-cards h4 {
+.menu-cards h3 {
   margin: 0;
 }
 .menu-cards p {

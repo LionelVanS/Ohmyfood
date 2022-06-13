@@ -4,8 +4,10 @@
     padding:10px 20px 80px 30px;
     display:flex;
     flex-direction: column;
+    justify-content:center;
     position:relative;
     top:-50px;
+    margin-bottom: -50px;
 
     & .nom-du-menu {
         display:flex;
@@ -22,9 +24,11 @@
 
     & .services {
         position:relative;
+        margin-top:20px;
         
         & h2 {
             font-size: $font-large;
+            margin-bottom: 30px;
             &::after {
                 content:"";
                 width:50px;
@@ -41,6 +45,8 @@
     & .btn {
         @include button;
         margin:auto;
+        margin-top:30px;
+
     }
 
 // BOUTON J'AIME

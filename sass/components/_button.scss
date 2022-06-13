@@ -10,7 +10,6 @@
     background: linear-gradient($color-secondary, $color-primary);
     box-shadow: 0px 5px 20px darken($color-shadow, 10%);
     position: relative;
-    z-index:1;
     
     &:hover {
         &::after {
@@ -26,11 +25,11 @@
         background: linear-gradient(lighten($color-secondary,10), lighten($color-primary,10));
         box-shadow: 5px 5px 15px rgb(128, 128, 128);
         opacity:0;
-        transition: opacity 500ms;
+        transition: 400ms;
     }
 
     & p {
-        z-index:2;
+        z-index:1;
         color: white;
         font-size:$font_medium;
     }

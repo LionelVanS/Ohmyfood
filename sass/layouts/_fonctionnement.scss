@@ -27,6 +27,9 @@
             background:lighten($color-primary, 35%);
             transition: 250ms;
         }
+        @include desktop {
+            width:30%;
+        }
     }
 
     & span {
