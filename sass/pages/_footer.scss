@@ -20,12 +20,14 @@ footer {
     & ul {
         padding:0;
     }
-
+    
     & span {
         width:30px;
     }
-
+    
     & a {
         color:white;
+        display:flex;
+        align-items: baseline;
     }
 }

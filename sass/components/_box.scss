@@ -1,0 +1,13 @@
+// STYLE PAR DEFAUT DES BOXS DE FONCTIONNEMENT
+// ET DES BOXS DES CARTES DES MENUS
+
+@mixin box {
+    display:flex;
+        align-items: center;
+        background-color: lighten($color-background,5%);
+        border-radius: 20px;
+        box-shadow: 2px 2px 15px $color-shadow;
+        @include desktop {
+            width:30%;
+        }
+}

@@ -1,21 +1,17 @@
 .menu-cards {
-    background:lighten($color-background,8%);
-    box-shadow: 0 10px 20px lighten($color-shadow,5%);
-    border-radius: 25px;
-    display:flex;
+    @include box;
     align-items:flex-end;
     justify-content: space-between;
     padding: 15px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 
     & h4 {
         margin:0;
-        font-size: $font_large;
     }
 
     & p {
         margin:0;
-        font-size:$font_small;
+
     }
 
 

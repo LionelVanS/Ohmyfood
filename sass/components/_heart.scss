@@ -1,19 +1,13 @@
-.heart {
-    position:relative;
-    margin-right:30px;
-}
+@mixin like {
 
-.full {
-    position:absolute;
-    color:red;
-    opacity:0;
-    &:active {
-        position:absolute;
-        animation: animation-heart 3s forwards;
-    }
-    
-    &:active .empty {
-        opacity:0;
-    }
+    .heart {
+        position:relative;
+        margin-right:30px;
 
+        & .full {
+            position:absolute;
+            color:red;
+            opacity:0;
+        }
+    }
 }
