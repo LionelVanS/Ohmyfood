@@ -1,0 +1,39 @@
+header {
+    width:100%;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px darken($color-shadow, 40%);
+    position:relative;
+    z-index: 1;
+    
+    & img {
+        width: 200px;
+    }
+
+    & a {
+        color:black;
+        position:absolute;
+        left:20px;
+    }
+    
+    // MEDIA QUERIES
+    
+    @include tablet{
+        height:100px;
+        
+        & img {
+            width:400px;
+        }
+    }
+    
+    @include desktop {
+        height:100px;
+        
+        & img {
+            width:400px;
+        }
+    }
+}
+

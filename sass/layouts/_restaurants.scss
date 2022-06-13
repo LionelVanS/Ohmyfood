@@ -1,0 +1,16 @@
+
+.all_cards {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+}
+
+.restaurants {
+    padding:30px;
+    
+    @include desktop {
+        background: lighten($color-background,5%);    
+    }
+}
