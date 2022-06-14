@@ -78,3 +78,17 @@
         transform: translate(9999px);
     }
 }
+
+
+// ANIMATION D'APPARITION DES CARTES DES PLATS
+
+@keyframes anim-cards {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity:1;
+    }
+}

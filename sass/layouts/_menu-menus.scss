@@ -22,7 +22,7 @@
 
 // ENTREES PLATS DESSERTS
 
-    & .services {
+    & .menu-all-cards {
         position:relative;
         margin-top:20px;
         
@@ -37,6 +37,11 @@
                 position:absolute;
                 top: 50px; left:0;
             }
+        }
+
+        @include desktop {
+            display:flex;
+
         }
     }
 
