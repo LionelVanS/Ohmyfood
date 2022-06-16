@@ -1,74 +1,86 @@
-//////////////
-/// CARTES ///
-//////////////
+// CARTES DES PLATS
 
-.cards {
-    display:block;
-    border-radius: 25px;
-    box-shadow: 0 10px 20px lighten($color-shadow, 15%);
-    margin-bottom:20px;
-    color:black;
-    position:relative;
-    background:white;
-
-    .new {
-        width:130px;
-        border-radius:3px;
-        display:flex;
-        justify-content:center;
-        background:$color-tertiary;
-        color: darken($color-tertiary,35%);
-        font-weight:600;
-        position:absolute;
-        right:20px; top:20px;
-        z-index:1;
-    }
-
-    &>img {
-        width:100%;
-        height:225px;
-        object-fit:cover;
-        border-radius:25px 25px 0 0;
-
-    }        
-
-    & h3 {
-        font-weight: 800;
-        margin:5px 0 0 20px;
-    }
-
-    & p {
-
-        font-weight:400;
-        margin: 0 0 10px 20px;
-    }
-    & .text {
-        display:flex;
-        align-items:center;
+    .Cards {
+        @include box;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
         justify-content:space-between;
-    }
 
-    & a {
-        color:black;
-        margin-bottom:10px;
-    }
 
-    @include desktop {
-        width: 400px;
-        margin:20px;
+// NOMS DES PLATS
+
+    &__Text { 
+        display:flex;
+        flex-direction: column;
+        padding: 1rem 0 1rem 1rem;
+        overflow:hidden;
+        text-overflow: ellipsis;
         
+        & > h3, p {
+            margin:0;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+// PRIX DES PLATS
+
+    & > p {
+        display:flex;
+        align-items:flex-end;
+        margin-left: auto;
+        padding:0 1rem;
     }
 
-    @include like;
+// COCHE D'AJOUT AU PANIER
 
-    &:hover .full {
-        position:absolute;
-        animation: animation-heart 3s forwards;
+    &__Add {
+            width:5rem;
+            @include center;
+            margin-right:-5rem;
+            background: $color-tertiary;
+            transform: rotateZ(180deg);
+            transition: all 500ms;
+            flex-shrink: 0;
+
+            span {
+                color:white;
+                transition: 200ms 200ms; 
+            }    
     }
     
-    &:hover .empty {
-        opacity:0;
+// ANIMATION DE COCHE AU SURVOL DES PLATS
+    
+    &:hover .Cards__Add {
+        margin-right:0;
     }
-    
-    
+
+    &:hover span {
+        transform: rotateZ(180deg);
+    }
+
+
+// ANIMATION D'APPARITION DES CARTES DES PLATS
+
+    animation: anim-cards 1s forwards;
+    opacity:0;
+}
+
+@for $i from 1 through 4 {
+    .anim-#{$i} {
+        animation-delay: 250ms * $i;
+
+    }
+}
+
+@keyframes anim-cards {
+    from {
+        transform: translateY(1rem);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
 }

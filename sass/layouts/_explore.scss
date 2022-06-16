@@ -1,20 +1,18 @@
 .Explore {
-    display: flex;
+    @include center;
     flex-direction: column;
-    align-items: center;
 
-    & .SearchBar {
+
+    &__SearchBar {
         width: 100%;
     }
         
-    & form {
-        display:flex;
-        align-items:center;
-        justify-content:center;
+    form {
+        @include center;
         background:$color-background;         
     }
         
-    & input {
+    input {
         width:150px;
         height:50px;
         border:0;
@@ -26,28 +24,26 @@
         }
     }
     
-    & span {
-        width:30px;
+    span {
+        width:2rem;
     }
     
-    & .Title {
+    &__Title {
         width:100%;
+        @include center;
         text-align : center;
-        padding: 20px 50px 50px 50px;
-        line-height: 40px;
-        display:flex;
         flex-direction:column; 
-        align-items:center;
+        padding: 1rem 3rem 3rem 3rem;
+        line-height: 2rem;
         background-color: lighten($color-background,5%);
         > p {
             font-weight: 300;
             font-size: $font_large;
             margin-top:0;
-            line-height: 25px;
         }
     } 
     
-    & .btn {
+    &__Btn {
         @include button;
     }
 }

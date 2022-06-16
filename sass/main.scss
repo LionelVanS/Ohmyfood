@@ -1,8 +1,9 @@
+// PAGE PRINCIPAL OU REGLES COMMUNES
+
 @import "utils/variables.scss";
 @import "utils/maps.scss";
 @import "utils/mixins.scss";
-@import "utils/keyframes.scss";
-@import "components/loading_spinner.scss";
+@import "components/loader.scss";
 @import "base/common-rules.scss";
 @import "components/button.scss";
 @import "pages/header.scss";
@@ -11,9 +12,9 @@
 @import "layouts/fonctionnement.scss";
 @import "components/heart.scss";
 @import "layouts/restaurants.scss";
-@import "components/cards.scss";
 @import "pages/footer.scss";
 
-@import "pages/banner.scss";
-@import "layouts/menu-menus.scss";
-@import "components/menu-cards.scss";
+// PAGES DE MENUS
+
+@import "layouts/menus.scss";
+@import "components/cards.scss";

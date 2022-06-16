@@ -3,8 +3,7 @@
 
 @mixin box {
     display:flex;
-        align-items: center;
-        background-color: lighten($color-background,5%);
-        border-radius: 20px;
-        box-shadow: 2px 2px 15px $color-shadow;
+    background-color: lighten($color-background,5%);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 15px $color-shadow;
 }

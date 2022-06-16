@@ -1,14 +1,31 @@
-//MEDIA QUERIES
+// MEDIA QUERIES
 
 @mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet-down)) 
-                  and (max-width: map-get($breakpoints, tablet-up)) {
+    @media screen and (min-width: map-get($breakpoints, mobile)) 
+                  and (max-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints,desktop-down)) {
+    @media screen and (min-width: map-get($breakpoints,desktop)) {
         @content;
     }
+}
+
+// @mixin media($keys, $key) {
+//     @each $key in $keys {
+//         @media (min-width: map-get($breakpoints, $key)){
+//             @content;
+//         }
+//     } 
+// }
+
+// FLEXBOX CENTRER ET ALIGNER
+
+@mixin center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @content;
 }

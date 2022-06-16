@@ -1,6 +1,9 @@
-.fonctionnement {
-    padding:30px;
-    & .all_box{
+// ESPACE FONCTIONNEMENT
+
+.Function {
+    padding:2rem;
+
+    &__All-Box{
         display:flex;
         flex-direction:column;
         @include desktop {
@@ -10,13 +13,19 @@
         }
     }
     
-    & .box {
+    &__Box {
         @include box;
         position:relative;
 
         &:nth-child(2) {
-            margin: 20px 0 20px 0;
+            margin: 1rem 0 1rem 0;
         }
+
+        @include desktop {
+            width:30%;
+    }
+
+//CHANGEMENT DE COULEURS DES BOXS AU SURVOL DE LA SOURIS
 
         &:hover span {
             color:$color-primary;
@@ -27,36 +36,34 @@
             background:lighten($color-primary, 35%);
             transition: 250ms;
         }
-        @include desktop {
-            width:30%;
-        }
+        
     }
 
-    & span {
-        width:100px;
-        display:flex;
-        justify-content: center;
-        color:darken($color-shadow,25%);
-        @include desktop {
-            width: 50px;
-            margin-left:20px;
-        }
-    }
+// CONTENU DES BOXS - NUMERO ICONE ET TEXTE
 
-    & p {
-        font-weight:600;
-    }
-
-    & .number {
-        width:30px;
-        height:30px;
-        border-radius:20px;
+    &__Number {
+        width:2rem;
+        height:2rem;
+        @include center;
+        border-radius:3rem;
         background-color: $color-primary;
         color:white;
-        display:flex;
-        justify-content: center;
-        align-items:center;
         position:absolute;
-        left:-10px;;
+        left:-1rem;top:-.3rem;
+    }
+
+    span {
+        width:100px;
+        @include center;
+        color:darken($color-shadow,25%);
+        @include desktop {
+            width: 3rem;
+            margin-left:2.5rem;
+            margin-right:1.5rem;
+        }
+    }
+    
+    p {
+        font-weight:600;
     }
 }

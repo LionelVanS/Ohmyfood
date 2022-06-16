@@ -1,0 +1,104 @@
+//PHOTO DE PRESENTATION
+
+.Banner {
+    & img {
+        width:100%;
+        object-fit: cover;
+
+        @include tablet {
+            height:511px;
+        }
+        @include desktop {
+            height:511px;
+        }
+    }
+}
+
+// PAGE DE MENU
+
+.Menu {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    background:$color-background;
+    border-radius: 3rem 3rem 0 0;
+    padding:2rem;
+    position:relative;          
+    top:-3rem; 
+    margin-bottom: -3rem;
+
+// CONTENEUR NOM DU MENU ET BOUTON J'AIME
+
+    &__Title {
+        display:flex;
+        align-items:baseline;
+        justify-content:space-between;
+    }
+
+// NOM DU MENU
+
+    h1 {
+        font-family: $title-font;
+        font-weight: 400;
+    }
+
+    
+// ENTREES PLATS DESSERTS  
+
+    &__All-Cards {
+
+        @include tablet {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        @include desktop {
+            display:flex;
+            flex-wrap:wrap;
+        }
+    }
+
+    &__Category-Cards {
+        position:relative;
+       
+        @include tablet {
+            width:30%;
+            margin:auto;
+        }
+
+        @include desktop {
+            width:30%;
+            margin:auto;
+        }    
+    }   
+
+    h2 {
+        font-size: $font-large;
+        margin: 0 0 2rem 1rem;
+        &::after {
+            content:"";
+            width:3rem;
+            height:.3rem;
+            background:$color-tertiary;
+            position:absolute;
+            top: 2rem; left:1rem;
+        }
+    }
+    
+
+//BOUTON COMMANDER
+
+    & .btn {
+        @include button;
+        margin:auto;
+        margin-top:2rem;
+
+    }
+
+// BOUTON J'AIME
+
+    @include like-button;
+    &:hover .full {
+        position:absolute;
+        animation: animation-heart 3s forwards;
+    }
+}

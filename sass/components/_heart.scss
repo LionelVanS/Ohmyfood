@@ -1,13 +1,50 @@
-@mixin like {
+// BOUTON J'AIME
+
+@mixin like-button {
 
     .heart {
         position:relative;
-        margin-right:30px;
+        margin-right:2rem;
 
         & .full {
             position:absolute;
             color:red;
             opacity:0;
         }
+    }
+}
+
+// ANIMATION DU BOUTON J'AIME
+
+@keyframes animation-heart{
+    0% {
+        opacity:1;
+        transform:translateY(10rem) scale(2.5) rotateZ(180deg);
+        animation-timing-function: cubic-bezier(.09,.93,.31,1);
+    }
+
+    24% {
+        transform:scale(1);
+
+    }
+    
+    25%,30%, 34% {
+        transform:rotate(-10deg) scale(1.5);
+        animation-timing-function: cubic-bezier(1,-0.01,0,.99);
+
+    }
+
+    27%, 31%, 37% {
+        transform: rotateZ(10deg) scale(1.5);
+        animation-timing-function: cubic-bezier(1,-0.01,0,.99);
+    }
+
+    45% {
+        transform:scale(1);
+    }
+
+    100% {
+        opacity:1;
+        transform: scale(1) translateY(0);
     }
 }
