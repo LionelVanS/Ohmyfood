@@ -216,7 +216,7 @@ header a {
   .Function span {
     width: 3rem;
     margin-left: 2.5rem;
-    margin-right: 1.5rem;
+    margin-right: 0.75rem;
   }
 }
 .Function p {
@@ -362,17 +362,8 @@ footer a {
 
 .Banner img {
   width: 100%;
+  height: 511px;
   object-fit: cover;
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .Banner img {
-    height: 511px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .Banner img {
-    height: 511px;
-  }
 }
 
 .Menu {
@@ -395,31 +386,20 @@ footer a {
   font-family: "Shrikhand";
   font-weight: 400;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .Menu__All-Cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 @media screen and (min-width: 992px) {
   .Menu__All-Cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .Menu__Category-Cards {
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .Menu__Category-Cards {
-    width: 30%;
-    margin: auto;
-  }
-}
 @media screen and (min-width: 992px) {
   .Menu__Category-Cards {
-    width: 30%;
-    margin: auto;
+    width: 420px;
+    margin: 1rem 1rem 0 1rem;
   }
 }
 .Menu h2 {
@@ -480,6 +460,7 @@ footer a {
   overflow: hidden;
   white-space: nowrap;
   justify-content: space-between;
+  cursor: pointer;
   animation: anim-cards 1s forwards;
   opacity: 0;
 }
