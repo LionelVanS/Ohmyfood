@@ -12,7 +12,9 @@
             justify-content:space-around;
         }
     }
-    
+
+// BOXS DE L'ESPACE FONCTIONNEMENT
+
     &__Box {
         @include box;
         position:relative;
@@ -36,11 +38,11 @@
             background:lighten($color-primary, 35%);
             transition: 250ms;
         }
-        
     }
 
 // CONTENU DES BOXS - NUMERO ICONE ET TEXTE
 
+    // NOMBRE
     &__Number {
         width:2rem;
         height:2rem;
@@ -52,6 +54,7 @@
         left:-1rem;top:-.3rem;
     }
 
+    // ICONE
     span {
         width:100px;
         @include center;
@@ -63,6 +66,7 @@
         }
     }
     
+    //TEXTE
     p {
         font-weight:600;
     }

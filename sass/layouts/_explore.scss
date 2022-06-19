@@ -1,17 +1,27 @@
+// ESPACE EXPLORER NOS RESTAURANTS
+
 .Explore {
     @include center;
     flex-direction: column;
 
 
+// BARRE DE RECHERCHE
+
     &__SearchBar {
         width: 100%;
     }
-        
+
+
+// FORMULAIRE DE RECHERCHE
+
     form {
         @include center;
         background:$color-background;         
     }
-        
+  
+    
+// ZONE DE SAISIE
+
     input {
         width:150px;
         height:50px;
@@ -23,11 +33,17 @@
             color:black;
         }
     }
-    
+
+
+// ICONE DE RECHERCHE
+
     span {
         width:2rem;
     }
+
     
+// TITRE RESERVEZ LE MENU ET PHRASE EN DESSOUS 
+
     &__Title {
         width:100%;
         @include center;
@@ -42,7 +58,10 @@
             margin-top:0;
         }
     } 
-    
+
+
+// BOUTON EXPLORER NOS RESTAURANTS
+
     &__Btn {
         @include button;
     }

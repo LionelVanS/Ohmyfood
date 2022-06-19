@@ -2,10 +2,10 @@
 
     .Cards {
         @include box;
+        justify-content:space-between;
         margin-bottom: 1rem;
         overflow: hidden;
         white-space: nowrap;
-        justify-content:space-between;
         cursor: pointer;
 
 
@@ -37,21 +37,21 @@
 // COCHE D'AJOUT AU PANIER
 
     &__Add {
-            width:5rem;
-            @include center;
-            margin-right:-5rem;
-            background: $color-tertiary;
-            transform: rotateZ(180deg);
-            transition: all 500ms;
-            flex-shrink: 0;
+        width: 5rem;
+        @include center;
+        margin-right: -5rem;
+        background: $color-tertiary;
+        transform: rotateZ(180deg);
+        transition: all 500ms;
+        flex-shrink: 0;
 
-            span {
-                color:white;
-                transition: 200ms 200ms; 
-            }    
+        span {
+            color:white;
+            transition: 200ms 200ms; 
+        }    
     }
     
-// ANIMATION DE COCHE AU SURVOL DES PLATS
+// ANIMATION DE COCHE D'AJOUT
     
     &:hover .Cards__Add {
         margin-right:0;
@@ -62,18 +62,22 @@
     }
 
 
-// ANIMATION D'APPARITION DES CARTES DES PLATS
+// PROPRIETES D'ANIMATION D'APPARITION DES CARTES
+// SUR LE SELECTEUR .CARDS
 
     animation: anim-cards 1s forwards;
     opacity:0;
 }
 
+// DECLARATION DU DELAI D'APPARITION DES CARTES
+
 @for $i from 1 through 4 {
     .anim-#{$i} {
         animation-delay: 250ms * $i;
-
     }
 }
+
+// ANIMATION D4APPARITION DES CARTES
 
 @keyframes anim-cards {
     from {

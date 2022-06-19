@@ -1,0 +1,21 @@
+{
+  "name": "workingdirectories",
+  "version": "1.0.0",
+  "description": "![](https://github.com/LionelVanS/Ohmyfood/blob/main/images/logo/ohmyfood.png)",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:css/style.css --style compressed",
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionelVanS/Ohmyfood.git"
+  },
+  "author": "Lionel Van S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LionelVanS/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/LionelVanS/Ohmyfood#readme",
+  "browserslist": "last 4 versions"
+}
