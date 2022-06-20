@@ -257,6 +257,7 @@ header a {
   position: absolute;
   opacity: 0;
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, blue, pink);
 }
@@ -487,6 +488,7 @@ footer a {
   position: absolute;
   opacity: 0;
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, blue, pink);
 }
