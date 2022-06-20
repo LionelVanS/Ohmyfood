@@ -83,8 +83,4 @@
 // BOUTON J'AIME
 
     @include like-button;
-    &:hover .full {
-        position:absolute;
-        animation: animation-heart 3s forwards;
-    }
 }

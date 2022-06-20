@@ -36,14 +36,14 @@
         @include center {
             justify-content: space-between;
         }
+        overflow:hidden;
 
         // BOUTON J'AIME
 
-        @include like-button;
-            &:hover .full {
-                position:absolute;
-                animation: animation-heart 3s forwards;
+        @include like-button{
+            margin-right: 2rem;
         }
+            
     }
 
     a {
