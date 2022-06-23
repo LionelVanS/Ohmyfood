@@ -68,10 +68,6 @@ header a {
   }
 }
 @keyframes animation-heart {
-  0% {
-    opacity: 0;
-    animation-timing-function: cubic-bezier(0.09, 0.93, 0.31, 1);
-  }
   100% {
     opacity: 1;
   }
@@ -263,7 +259,6 @@ header a {
   cursor: pointer;
 }
 .Restaurants__Cards__Text .heart .fa-solid:hover {
-  position: absolute;
   animation: animation-heart 1000ms forwards;
 }
 .Restaurants__Cards a {
@@ -495,7 +490,6 @@ footer a {
   cursor: pointer;
 }
 .Menu .heart .fa-solid:hover {
-  position: absolute;
   animation: animation-heart 1000ms forwards;
 }
 

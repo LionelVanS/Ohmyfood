@@ -63,7 +63,7 @@
 
 
 // PROPRIETES D'ANIMATION D'APPARITION DES CARTES
-// SUR LE SELECTEUR .CARDS
+// .Cards {
 
     animation: anim-cards 1s forwards;
     opacity:0;
@@ -77,7 +77,7 @@
     }
 }
 
-// ANIMATION D4APPARITION DES CARTES
+// ANIMATION D'APPARITION DES CARTES
 
 @keyframes anim-cards {
     from {
